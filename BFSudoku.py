@@ -14,11 +14,13 @@ default_board = [
      "...75.8.6"
  ]
 
-
 def main():
     global board
     if len(sys.argv) > 1:
         board = sys.argv[1:10]
+        if not validate_board(board):
+            print("Invalid board: Each row must have 9 characters, and only digits 1-9 or '.' are allowed.")
+            return
     else:
         board = default_board
     for idx, line in enumerate(board):
@@ -26,6 +28,18 @@ def main():
 
     solve()
     printBoard()
+
+def validate_board(board):
+    if len(board) != 9:
+        return False
+    for row in board:
+        if len(row) != 9: 
+            return False
+        for char in row:
+            if char not in "123456789.": 
+                return False
+
+    return True
     
        
 def solve():
