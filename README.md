@@ -4,11 +4,11 @@ This Python script solves a given Sudoku puzzle using a brute-force backtracking
 Usage
 Default Board: If no input is provided, the script will solve a predefined Sudoku puzzle.
 
-python3 sudoku.py
+python3 BFSudoku.py
 
 Custom Board: To solve a custom puzzle, pass nine strings as command-line arguments, each representing a row in the Sudoku grid. Each string should contain exactly 9 characters, with numbers 1-9 for filled cells and a . to denote empty cells.
 
-python3 sudoku.py "........." "5.3.67..." "9..3421.." ".....4..." "..1...72." "..2.1...." ".3......9" ".8.1..2.." "...75.8.6"
+python3 BFSudoku.py "........." "5.3.67..." "9..3421.." ".....4..." "..1...72." "..2.1...." ".3......9" ".8.1..2.." "...75.8.6"
 
 Input Validation
 The script includes validation checks to ensure the input is well-formed:
